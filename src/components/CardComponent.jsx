@@ -17,7 +17,7 @@ const CardComponent = ({card,handleChoice, flipped, selected}) => {
         <img src={card.src} alt={card.src} className="front" />
         <img 
           className="back" 
-          src="src/assets/cover.png" 
+          src="./src/assets/cover.png" 
           alt="cover" 
           onClick={handleSubmit} />
         </div>
