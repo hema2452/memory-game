@@ -1,16 +1,23 @@
 import { useEffect, useState } from 'react'
 import './App.css'
-import helmet from  "/src/assets/helmet-1.png"
 import CardComponent from './components/CardComponent'
+import helmet from  "/src/assets/helmet-1.png"
+import potion from  "/src/assets/potion-1.png"
+import ring from  "/src/assets/ring-1.png",
+import scroll from  "/src/assets/scroll-1.png"
+import shield from  "/src/assets/shield-1.png"
+import sword from  "/src/assets/sword-1.png"
+
+
 
 
 const cardImages=[
   {"src":helmet,matched:false},
-  {"src":"/src/assets/potion-1.png",matched: false},
-  {"src":"/src/assets/ring-1.png",matched: false},
-  {"src":"/src/assets/scroll-1.png",matched: false},
-  {"src":"/src/assets/shield-1.png",matched: false},
-  {"src":"/src/assets/sword-1.png",matched: false}
+  {"src":potion,matched: false},
+  {"src":ring, matched: false},
+  {"src": scroll,matched: false},
+  {"src": shield,matched: false},
+  {"src": sword,matched: false}
 ]
 
 
@@ -50,13 +57,11 @@ function App() {
           return prevCards.map((card) => {
             if(card.src === choiceOne.src){
               setcount(count+1)               
-              return {...card, matched: true}
-             
+              return {...card, matched: true}            
             }
             else{
               return card
-            }
-          })
+            }})
         })         
         resetTurn();
       }
@@ -74,9 +79,6 @@ function App() {
     setTurns(previous => previous+1)
     setdisabled(false)
   }
-
-
-
   return (
     <div className="container-main">
       <h1>Memory Game</h1>
@@ -94,9 +96,6 @@ function App() {
         />
       ))}             
       </div>
-      <p>Total Turns:{turns}</p>
-   
-
     </div>
   
 
