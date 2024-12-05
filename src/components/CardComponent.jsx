@@ -5,9 +5,9 @@ const CardComponent = ({card,handleChoice, flipped, selected}) => {
     if(!selected){
       handleChoice(card)
     }
-    else{
-      console.log("it is under checkeing")
-    }
+    // else{
+    //   console.log("it is under checkeing")
+    // }
     
   }
   return (
